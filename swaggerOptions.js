@@ -8,10 +8,13 @@ const swaggerOptions = {
       description: pkg.description,
     },
   },
-  apis: [
+       
+  apis: ['./routes/users.js', './controllers/user.js'
+         ,'./routes/likes.js', './controllers/likes.js'
          ,'./routes/post.js', './controllers/post.js'
          ,'./routes/connections.js', './controllers/connections.js'
          ,'./routes/comment.js', './controllers/comment.js'
+         ,'./routes/aleart.js', './controllers/aleart.js'         
 ], 
 };
 

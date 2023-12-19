@@ -2,9 +2,12 @@ import swaggerUi from 'swagger-ui-express';
 import swaggerJsdoc from 'swagger-jsdoc';
 import Express from "express";
 import postRoutes from "./routes/post.js";
-import cookieParser from "cookie-parser";
 import commentRoutes from "./routes/comment.js"
 import connectionsRouts from "./routes/connections.js";
+import userRoutes from "./routes/users.js"
+import cookieParser from "cookie-parser";
+import aleartRoutes from "./routes/aleart.js"
+import likeRoutes from "./routes/likes.js"
 
 const app = Express()
 app.use(Express.json());
@@ -23,4 +26,7 @@ app.listen(PORT, () => {
 app.use("/api/posts", postRoutes);
 app.use("/api/comment", commentRoutes);
 app.use("/api/connections", connectionsRouts);
+app.use("/api/users", userRoutes);
+app.use("/api/alert", aleartRoutes);
+app.use("/api/likes", likeRoutes)
 
