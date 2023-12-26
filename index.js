@@ -10,6 +10,8 @@ import userRoutes from "./routes/users.js"
 import cookieParser from "cookie-parser";
 import aleartRoutes from "./routes/aleart.js"
 import likeRoutes from "./routes/likes.js"
+import Weather from "./routes/Weather.js"
+
 
 const app = Express()
 app.use(Express.json());
@@ -33,4 +35,5 @@ app.use("/api/connections", connectionsRouts);
 app.use("/api/users", userRoutes);
 app.use("/api/alert", aleartRoutes);
 app.use("/api/likes", likeRoutes)
+app.use('/api/Weather',Weather);
 
